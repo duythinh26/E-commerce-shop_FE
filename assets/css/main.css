@@ -1,0 +1,60 @@
+.header {
+    height: 120px;
+    background-image: linear-gradient(0, #fe6433, #f53e2d);
+}
+
+.header__navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__navbar-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 4px 0 0;
+}
+
+.header__navbar-item {
+    display: inline-block;
+    margin: 0 8px;
+    font-size: 1.3rem;
+    position: relative;
+}
+
+.header__navbar-item-link {
+    text-decoration: none;
+}
+
+.header__navbar-item, 
+.header__navbar-item-link {
+    color: var(--white-color);
+    font-weight: 300;
+}
+
+.header__navbar-item--bold {
+    font-weight: 500;
+}
+
+/* Tạo dấu phân cách sau một số phần tử */
+.header__navbar-item--separate::after {
+    content: "";
+    display: block;
+    position: absolute;
+
+    /* Cách thứ 1 để tạo dấu phân cách */
+    /* width: 1px;
+    height: 12px;
+    background-color: #fb9086; */
+    /* Cách thứ 2 để tạo dấu phân cách*/
+    border-left: 1px solid #fb9086;
+    height: 16px;
+
+    /* Căn dấu phân cách về đúng vị trí */
+    right: -8px;
+    top: 50%; 
+    /* top: 50% sẽ kéo dấu phân cách xuống, dùng transform: translateY(-50%);*/
+    /* Vì đang di chuyển theo chiều dọc nên dùng translateY */
+    /* transform: translateY(-50%) được hiểu là -50% kích thước của chính nó, 
+    tức là -50% của height ở trên, nên sẽ quay ngược lên */
+    transform: translateY(-50%);
+}
