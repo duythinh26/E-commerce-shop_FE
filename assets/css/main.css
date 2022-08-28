@@ -3,6 +3,8 @@
     background-image: linear-gradient(0, #fe6433, #f53e2d);
 }
 
+/* Navbar CSS */
+
 .header__navbar {
     display: flex;
     justify-content: space-between;
@@ -88,4 +90,62 @@
 .header__navbar-title--no-pointer {
     cursor: text;
     color: var(--white-color);
+}
+
+/* QR Code CSS */
+.header__qr {
+    width: 185px;
+    background-color: var(--white-color);
+    position: absolute;
+
+    /* top: 100% tính theo thẻ chứa thuộc tính position: relative (.header__navbar-item) */
+    top: 120%;
+    left: 0;
+    padding: 8px;
+    border-radius: 2px;
+    display: none;
+
+    /* Sử dụng animation đã viết ở file base.css */
+    animation: fadeIn ease-in 0.25s;
+}
+
+/* Những css viết ở dưới sẽ được apply vào header__qr trong trường hợp header__navbar-item--appear-qr được hover.
+header__qr phải là con của header__navbar-item--appear-qr */
+.header__navbar-item--appear-qr:hover .header__qr {
+    display: block;
+}
+
+/* Giải quyết vấn đề hover vào nhưng kéo xuống sẽ mất bảng QR Code */
+.header__qr::before {
+    width: 100%;
+    height: 20px;
+
+    position: absolute;
+    top: -16px;
+    left: 0;
+    content: "";
+    display: block;
+}
+
+.header__qr-img {
+    width: 100%;
+}
+
+.header__qr-apps {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Sử dụng lớp giả nth-child để xác định thứ tự các phần tử con.
+Ở trường hợp này có 2 child nên có thể dùng first-child và last-child */
+.header__qr-link:nth-child(1) {
+    margin-left: 10px;
+}
+
+.header__qr-link:nth-child(2) {
+    margin-right: 10px;
+}
+
+.header__qr-download-img {
+    height: 15px;
 }
