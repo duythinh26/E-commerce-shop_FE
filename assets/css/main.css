@@ -149,3 +149,95 @@ header__qr phải là con của header__navbar-item--appear-qr */
 .header__qr-download-img {
     height: 15px;
 }
+
+/* Header Notification */
+.header__notify {
+    position: absolute;
+    top: 120%;
+    right: 0;
+    width: 400px;
+    border: 1px solid #d3d3d3;
+    background-color: var(--white-color);
+}
+
+.header__notify-header {
+    height: 40px;
+    background-color: var(--white-color);
+}
+
+.header__notify-header h3 {
+    color: #999;
+    margin: 0 0 0 12px;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 40px;
+}
+
+.header__notify-list {
+    padding-left: 0;
+}
+
+.header__notify-item {
+    display: flex;
+}
+
+.header__notify-item:hover {
+    background-color: #f7f7f7;
+}
+
+.header__notify-item--unread {
+    background-color: rgba(238, 77, 45, 0.1);
+}
+
+.header__notify-link {
+    display: flex;
+    width: 100%;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.header__notify-img {
+    width: 48px;
+    /* Dùng object-fit: contain để xử lý việc ảnh bị méo do dùng flexbox */
+    object-fit: contain;
+}
+
+.header__notify-info {
+    margin-left: 12px;
+}
+
+.header__notify-name {
+    display: block;
+    color: var(--text-color);
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.8rem;
+}
+
+.header__notify-desc {
+    display: block;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    color: #765f6e;
+    margin-top: 4px;
+}
+
+.header__notify-view-all {
+    /* Sử dụng text-align: center; sẽ làm cho btn ở dưới ko thể padding được.
+    Trong trường hợp này chúng ta sẽ dùng flexbox để căn giữa */
+    display: flex;
+}
+
+.header__notify-view-all-btn {
+    text-decoration: none;
+    color: var(--text-color);
+    /* width: 100%; để người dùng có thể bấm vào nút "Xem tất cả" dễ hơn */
+    width: 100%;
+    padding: 8px 0;
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-align: center;
+    /* Nếu không sử dụng display: flex; ở phía trên thì có thể dùng display: block; ở class này. 
+    Kết quả cho ra tương tự */
+}
+
