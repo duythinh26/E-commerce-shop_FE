@@ -158,6 +158,28 @@ header__qr phải là con của header__navbar-item--appear-qr */
     width: 400px;
     border: 1px solid #d3d3d3;
     background-color: var(--white-color);
+    cursor: default;
+    display: none;
+
+    animation: headerNotify ease-in 0.2s;
+    /* Thuộc tính transfrom-origin giúp thay đổi tâm của một phần tử dùng animation */
+    transform-origin: calc(100% - 20px) top;
+}
+
+/* Những css viết ở dưới sẽ được apply vào header__notify trong trường hợp header__navbar-item--appear-notify được hover.
+header__qr phải là con của header__navbar-item--appear-qr */
+.header__navbar-item--appear-notify:hover .header__notify {
+    display: block;
+}
+
+@keyframes headerNotify {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    } to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 .header__notify-header {
@@ -171,6 +193,7 @@ header__qr phải là con của header__navbar-item--appear-qr */
     font-weight: 400;
     font-size: 1.4rem;
     line-height: 40px;
+    /* Có thể thêm thuộc tính user-select: none; để không cho người dùng select 1 thứ gì đó */
 }
 
 .header__notify-list {
