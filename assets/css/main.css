@@ -172,16 +172,26 @@ header__qr phải là con của header__navbar-item--appear-qr */
     display: block;
 }
 
-/* Xử lý vấn đề hover vào nhưng kéo xuống sẽ mất bảng notification  */
+/* Làm border hình tam giác cho bảng notification*/
 .header__notify::before {
-    width: 100%;
-    height: 20px;
-
-    position: absolute;
-    top: -16px;
-    left: 0;
     content: "";
+    border-width: 20px 30px;
+    border-style: solid;
+    border-color: transparent transparent var(--white-color) transparent;
+    position: absolute;
+    top: -30px;
+    right: 0;
+}
+
+/* Xử lý vấn đề hover vào nhưng kéo xuống sẽ mất bảng notification */
+.header__notify::after {
+    width: 90px;
+    height: 20px;
     display: block;
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -16px;
 }
 
 @keyframes headerNotify {
