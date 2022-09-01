@@ -43,3 +43,39 @@ html {
         opacity: 1;
     } 
 }
+
+/* Modal CSS */
+.modal {
+    /* Làm cho phần modal chiếm hết màn hình */
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+}
+
+.modal__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.33333333333333)
+}
+
+.modal__body {
+    width: 300px;
+    height: 300px;
+    background-color: var(--white-color);
+    border-radius: 5px;
+    margin: auto;
+    /* Vì lớp body nằm dưới lớp overlay do lớp overlay dùng thuộc tính position khiến lớp overlay nằm trên một lớp cao hơn
+    Cách giải quyết là thêm thuộc tính position vào phần body*/
+    position: relative;
+    /* Để chắc chắn, chúng ta dùng thuộc tính z-index và cho giá trị z-index ở body cao hơn giá trị z-index ở overlay.
+    Mặc định giá trị z-index ở overlay = 0 nếu không dùng thuộc tính z-index */
+    z-index: 1;
+}
+
+.modal__inner {
+
+}
