@@ -74,7 +74,3 @@ html {
     Mặc định giá trị z-index ở overlay = 0 nếu không dùng thuộc tính z-index */
     z-index: 1;
 }
-
-.modal__inner {
-
-}
