@@ -306,6 +306,8 @@ header__qr phải là con của header__navbar-item--appear-qr */
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 12px;
+    margin-top: 10px;
 }
 
 .auth__heading {
