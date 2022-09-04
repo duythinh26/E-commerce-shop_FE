@@ -118,11 +118,9 @@
 
         </div>
         <div class="modal__body">
-            <!-- Class inner để code các thành phần riêng -->
-            <div class="modal__inner">
-                <!-- Authentication form -->
-                <div class="auth">
-
+            <!-- Authentication form -->
+            <div class="auth">
+                <div class="auth__container">
                     <div class="auth__header">
                         <h3 class="auth__heading">Đăng Ký</h3>
                         <span class="auth__switch-btn">Đăng Nhập</span>
@@ -143,26 +141,25 @@
                     <div class="auth__aside">
                         <p class="auth__policy-text">
                             Bằng việc đăng ký, bạn đã đồng ý với Shopee về 
-                            <a href="" class="auth__policy-link">Điều khoản dịch vụ</a> & 
-                            <a href="" class="auth__policy-link">Chính sách bảo mật</a>
+                            <a href="" class="auth__text-link">Điều khoản dịch vụ</a> & 
+                            <a href="" class="auth__text-link">Chính sách bảo mật</a>
                         </p>
                     </div>
 
                     <div class="auth__controls">
-                        <button class="btn">TRỞ LẠI</button>
+                        <button class="btn btn--normal auth__controls-back">TRỞ LẠI</button>
                         <button class="btn btn--primary">ĐĂNG KÝ</button>
                     </div>
-
-                    <div class="auth__socials">
-                        <a href="" class="btn btn--icon">
-                            <i class="fa-brands fa-square-facebook"></i>
-                            Kết nối với Facebook
-                        </a>
-                        <a href="" class="btn btn--icon">
-                            <i class="fa-brands fa-google"></i>
-                            Kết nối với Google
-                        </a>
-                    </div>
+                </div>
+                <div class="auth__socials">
+                    <a href="" class="auth__socials--facebook btn btn--icon btn--pc">
+                        <i class="fa-brands fa-square-facebook auth__socials-icon"></i>
+                        <span class="auth__socials-title">Kết nối với Facebook</span>
+                    </a>
+                    <a href="" class="auth__socials--google btn btn--icon btn--pc">
+                        <i class="fa-brands fa-google auth__socials-icon"></i>
+                        <span class="auth__socials-title">Kết nối với Google</span>
+                    </a>
                 </div>
             </div>
         </div>

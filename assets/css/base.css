@@ -64,8 +64,6 @@ html {
 }
 
 .modal__body {
-    background-color: var(--white-color);
-    border-radius: 5px;
     margin: auto;
     /* Vì lớp body nằm dưới lớp overlay do lớp overlay dùng thuộc tính position khiến lớp overlay nằm trên một lớp cao hơn
     Cách giải quyết là thêm thuộc tính position vào phần body*/
@@ -73,4 +71,46 @@ html {
     /* Để chắc chắn, chúng ta dùng thuộc tính z-index và cho giá trị z-index ở body cao hơn giá trị z-index ở overlay.
     Mặc định giá trị z-index ở overlay = 0 nếu không dùng thuộc tính z-index */
     z-index: 1;
+}
+
+/* Button css */
+.btn {
+    min-width: 142px;
+    height: 34px;
+    /* Đề phòng class này đc dùng cho thẻ a, nên dùng text-decoration: none */
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 1.5rem;
+    padding: 0 12px;
+    outline: none;
+    cursor: pointer;
+    color: var(--text-color);
+    background-color: var(--white-color);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn.btn--normal:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.btn.btn--pc {
+    height: 32px;
+    font-size: 1.2rem;
+    padding: 0 8px;
+}
+
+/* CSS dưới đc hiểu là select tới 1 thẻ có cả 2 class btn và btn--primary (viết liền ko dấu cách) */
+.btn.btn--primary {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+
+/* Đôi khi chúng ta cần vô hiệu hóa một vài nút, tạo class btn--disable để làm điều này */
+.btn.btn--disable {
+    cursor: not-allowed;
+    color: rgba(0, 0, 0, 0.26);
 }
