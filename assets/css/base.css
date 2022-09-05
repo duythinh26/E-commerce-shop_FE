@@ -91,6 +91,9 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    /* Để line-height số chẵn để tạm thời fix căn giữa cho nút */
+    line-height: 1.6rem;
 }
 
 .btn.btn--normal:hover {
