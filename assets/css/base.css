@@ -45,6 +45,14 @@ html {
     } 
 }
 
+@keyframes growth {
+    from {
+        transform: scale(var(--growth-from));
+    } to {
+        transform: scale(var(--growth-to));
+    }
+}
+
 /* Modal CSS */
 .modal {
     /* Làm cho phần modal chiếm hết màn hình */
@@ -54,6 +62,9 @@ html {
     bottom: 0;
     left: 0;
     display: flex;
+    
+    /* Lầm animation cho phần modal */
+    animation: fadeIn linear 0.1s;
 }
 
 .modal__overlay {
@@ -71,6 +82,11 @@ html {
     /* Để chắc chắn, chúng ta dùng thuộc tính z-index và cho giá trị z-index ở body cao hơn giá trị z-index ở overlay.
     Mặc định giá trị z-index ở overlay = 0 nếu không dùng thuộc tính z-index */
     z-index: 1;
+
+    /* Tạo ra 2 biến cho animation */
+    --growth-from: 0.7;
+    --growth-to: 1;
+    animation: growth linear 0.1s;
 }
 
 /* Button css */

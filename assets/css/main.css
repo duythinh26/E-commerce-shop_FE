@@ -401,3 +401,27 @@ header__qr phải là con của header__navbar-item--appear-qr */
 .auth__socials-title {
     margin: 0 36px;
 }
+
+.auth__help {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.auth__help-link {
+    color: #939393;
+    text-decoration: none;
+    font-size: 1.4rem;
+}
+
+.auth__help-forgot {
+    color: var(--primary-color);
+}
+
+.auth__help-separate {
+    display: block;
+    height: 20px;
+    border-left: 1px solid #eaeaea;
+    margin: -2px 16px 0;
+}
+
+
