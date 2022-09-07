@@ -424,10 +424,12 @@ header__qr phải là con của header__navbar-item--appear-qr */
     margin: -2px 16px 0;
 }
 
+/* Header search CSS */
 .header-search {
     height: var(--header-search-height);
     display: flex;
     align-items: center;
+    margin: 0 8px;
 }
 
 .header__logo {
